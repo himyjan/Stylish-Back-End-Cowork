@@ -25,11 +25,10 @@ function Product(props) {
         {product.colors.map((color) => (
           <div
             key={color.code}
-            className={`product__color${
-              color.code === selectedColorCode
-                ? ' product__color--selected'
-                : ''
-            }`}
+            className={`product__color${color.code === selectedColorCode
+              ? ' product__color--selected'
+              : ''
+              }`}
             style={{ backgroundColor: `#${color.code}` }}
             onClick={() => {
               setSelectedColorCode(color.code);
@@ -50,9 +49,8 @@ function Product(props) {
           return (
             <div
               key={size}
-              className={`product__size${
-                size === selectedSize ? ' product__size--selected' : ''
-              }${stock === 0 ? ' product__size--disabled' : ''}`}
+              className={`product__size${size === selectedSize ? ' product__size--selected' : ''
+                }${stock === 0 ? ' product__size--disabled' : ''}`}
               onClick={() => {
                 if (stock === 0) return;
                 setSelectedSize(size);
@@ -168,4 +166,5 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<App />);

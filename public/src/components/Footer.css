@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-.footer__link + .footer__link::before {
+.footer__link+.footer__link::before {
   content: '|';
   position: absolute;
   left: 0;
@@ -103,7 +103,7 @@
     font-size: 14px;
   }
 
-  .footer__link + .footer__link::before {
+  .footer__link+.footer__link::before {
     content: '';
   }
 

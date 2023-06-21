@@ -28,9 +28,9 @@ describe('marketing', () => {
     const cache = require('../util/cache');
 
     // let cache do nothing
-    stub1 = sinon.stub(cache, 'get').callsFake(() => {});
-    stub2 = sinon.stub(cache, 'set').callsFake(() => {});
-    stub2 = sinon.stub(cache, 'del').callsFake(() => {});
+    stub1 = sinon.stub(cache, 'get').callsFake(() => { });
+    stub2 = sinon.stub(cache, 'set').callsFake(() => { });
+    stub2 = sinon.stub(cache, 'del').callsFake(() => { });
 
     const res1 = await requester.post('/api/1.0/user/signin').send(user1);
     const data1 = res1.body.data;

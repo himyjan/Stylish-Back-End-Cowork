@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 
-.carousel__dot + .carousel__dot {
+.carousel__dot+.carousel__dot {
   margin-left: 22px;
 }
 
@@ -96,7 +96,7 @@
     height: 4px;
   }
 
-  .carousel__dot + .carousel__dot {
+  .carousel__dot+.carousel__dot {
     margin-left: 8.8px;
   }
 
@@ -136,7 +136,7 @@
   box-shadow: 0px 0px 1px #bbbbbb;
 }
 
-.product__color + .product__color {
+.product__color+.product__color {
   margin-left: 10px;
 }
 
@@ -175,7 +175,7 @@
     height: 12px;
   }
 
-  .product__color + .product__color {
+  .product__color+.product__color {
     margin-left: 6px;
   }
 

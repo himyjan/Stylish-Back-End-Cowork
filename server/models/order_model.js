@@ -1,5 +1,5 @@
 const { pool } = require('./mysqlcon');
-const got = require('got');
+const axios = require('axios');
 
 const createOrder = async (order) => {
   const [result] = await pool.query('INSERT INTO order_table SET ?', order);
@@ -23,7 +23,7 @@ const createPayment = async function (orderId, payment) {
 };
 
 const payOrderByPrime = async function (tappayKey, tappayId, prime, order) {
-  let res = await got.post('https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime', {
+  let res = await axios.post('https://sandbox.tappaysdk.com/tpc/payment/pay-by-prime', {
     headers: {
       'Content-Type': 'application/json',
       'x-api-key': tappayKey,

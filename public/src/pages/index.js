@@ -16,9 +16,8 @@ function Carousel() {
     <div className="carousel">
       {campaigns.map((campaign, index) => (
         <a
-          className={`carousel__campaign${
-            index === activeCampaignIndex ? ' carousel__campaign--active' : ''
-          }`}
+          className={`carousel__campaign${index === activeCampaignIndex ? ' carousel__campaign--active' : ''
+            }`}
           style={{
             backgroundImage: `url(${campaign.picture})`,
           }}
@@ -38,9 +37,8 @@ function Carousel() {
       <div className="carousel__dots">
         {campaigns.map((campaign, index) => (
           <div
-            className={`carousel__dot${
-              index === activeCampaignIndex ? ' carousel__dot--active' : ''
-            }`}
+            className={`carousel__dot${index === activeCampaignIndex ? ' carousel__dot--active' : ''
+              }`}
             key={campaign.id}
             onClick={() => {
               setActiveCampaignIndex(index);
@@ -135,4 +133,5 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<App />);

@@ -41,9 +41,9 @@ function Cart(props) {
     const newCartItems = props.cartItems.map((item, index) =>
       index === itemIndex
         ? {
-            ...item,
-            qty: itemQuantity,
-          }
+          ...item,
+          qty: itemQuantity,
+        }
         : item
     );
     props.setCartItems(newCartItems);
@@ -342,4 +342,5 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<App />);
